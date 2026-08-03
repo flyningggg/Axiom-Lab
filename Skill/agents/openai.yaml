@@ -1,0 +1,7 @@
+interface:
+  display_name: "Axiom Lab"
+  short_description: "检索、实验比较、算法沉淀及论文生成的建模竞赛工作流"
+  default_prompt: "Use $solve-math-modeling-competition to research candidate methods, benchmark them fairly, promote reusable algorithms, and produce a validated Chinese paper."
+
+policy:
+  allow_implicit_invocation: true

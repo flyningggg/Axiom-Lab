@@ -1,0 +1,16 @@
+# Core numerical and data stack
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+
+# Competition data and document readers
+chardet
+openpyxl
+xlrd
+PyPDF2
+python-docx
+
+# Optional model-specific packages such as xgboost or tensorflow should be
+# installed only when a selected candidate method requires them.

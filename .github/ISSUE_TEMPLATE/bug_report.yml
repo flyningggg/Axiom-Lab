@@ -1,0 +1,58 @@
+name: Bug report
+description: 报告可复现的 Skill、算法、脚本或模板问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢反馈。请勿上传包含个人信息、密钥或未授权竞赛数据的文件。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题区域
+      options:
+        - Codex Skill
+        - 方法检索与实验比较
+        - 算法库
+        - Python 脚本
+        - LaTeX 模板或 PDF
+        - 文档
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 说明实际行为和期望行为。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 最小复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Codex 表面、Python 与 XeLaTeX 版本。
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或截图
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已删除密钥、个人信息和未授权数据
+          required: true
+        - label: 我已搜索现有 Issue，未找到相同问题
+          required: true

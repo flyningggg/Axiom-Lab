@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Codex Skill](https://img.shields.io/badge/OpenAI-Codex-green.svg)](https://developers.openai.com/codex)
 
-Axiom Lab 将赛题理解、数据审计、方法检索、复现实验、公平比较、算法沉淀和论文写作连接为一条可追溯工作流。它不会仅凭经验直接选择模型，而是先检索 Kaggle、原始论文和本地算法库，再用统一实验协议选择方法，最后把通过测试与许可检查的通用实现沉淀到算法库。
+Axiom Lab 将赛题理解、数据审计、方法检索、复现实验、公平比较、算法沉淀和论文写作连接为一条可追溯工作流。它不会仅凭经验直接选择模型，而是先检索 Kaggle、原始论文和本地算法库，把候选分为 `Baseline`、`Proven` 和 `Frontier` 并完成过时性审查，再用统一实验协议选择方法，最后把通过测试与许可检查的通用实现沉淀到算法库。
 
 ---
 

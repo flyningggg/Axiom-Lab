@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Codex Skill](https://img.shields.io/badge/OpenAI-Codex-green.svg)](https://developers.openai.com/codex)
 
-Axiom Lab 将赛题理解、数据审计、方法检索、复现实验、公平比较、算法沉淀和论文写作连接为一条可追溯工作流。它不会仅凭经验直接选择模型，而是先检索 Kaggle、原始论文和本地算法库，把候选分为 `Baseline`、`Proven` 和 `Frontier` 并完成过时性审查，再用统一实验协议选择方法，最后把通过测试与许可检查的通用实现沉淀到算法库。
+Axiom Lab 将赛题理解、数据审计、方法检索、稳定基线、创新验证、算法沉淀和论文写作连接为一条可追溯工作流。它先检索 Kaggle、原始论文和本地算法库，分别标记候选成熟度与创新类型并完成最近方法和过时性审查；基线通过后，再从真实误差和题目约束中提出可证伪创新，通过同协议比较与消融决定晋升或回退，最后只把经过验证的通用实现沉淀到算法库。
 
 ---
 
@@ -22,7 +22,7 @@ Axiom Lab 将赛题理解、数据审计、方法检索、复现实验、公平�
 ## 各模块说明
 
 ### `.agents/skills/solve-math-modeling-competition/`
-Axiom Lab 的正式 Codex Skill。直接在本仓库打开 Codex 即可被发现，也可将该目录复制到 `$HOME/.agents/skills/` 作为用户级 Skill。调用后会连续完成：读取输入 → 检索 Kaggle、论文和本地算法 → 复现并公平比较 → 逐题求解 → 沉淀通用算法 → 撰写论文 → 编译并逐页检查 PDF。
+Axiom Lab 的正式 Codex Skill。直接在本仓库打开 Codex 即可被发现，也可将该目录复制到 `$HOME/.agents/skills/` 作为用户级 Skill。调用后会连续完成：读取输入 → 检索与最近方法审查 → 验证稳定基线 → 提出并消融创新假设 → 晋升或回退 → 逐题求解 → 沉淀通用算法 → 撰写论文 → 编译并逐页检查 PDF。
 
 入口为 `.agents/skills/solve-math-modeling-competition/SKILL.md`。
 

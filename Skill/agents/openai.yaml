@@ -1,7 +1,7 @@
 interface:
   display_name: "Axiom Lab"
-  short_description: "稳定基线、创新验证、算法沉淀及论文生成的建模竞赛工作流"
-  default_prompt: "Use $solve-math-modeling-competition to build reliable baselines, test problem-specific innovation hypotheses with fair comparisons and ablations, promote validated algorithms, and produce an evidence-backed Chinese paper."
+  short_description: "可靠求解、建模论证、结果验证与中文论文验收工作流"
+  default_prompt: "Use $solve-math-modeling-competition to solve the problem reliably and produce a modeling-first Chinese paper whose abstract, mathematical model, algorithm, results, and validation are easy for judges to understand."
 
 policy:
   allow_implicit_invocation: true

@@ -73,6 +73,35 @@ def main() -> int:
 
 按创新 ID 记录最近方法、核心差异、实验路径、成功标准、实际结果、结论、适用边界和论文允许表述。
 """
+    paper_blueprint = """# 论文论证蓝图
+
+> 本文件把内部求解过程映射为正式论文的数学论证。建模与正式结果确定后补全，写作前不得保留关键空项。
+
+## 全文统一主线
+
+- 研究对象：
+- 四问递进关系：
+- 统一建模思想：
+- 结论边界：
+
+## 问题一
+
+- 题目任务与核心难点：
+- 建模动机：
+- 决策或状态变量：
+- 参数、集合与单位：
+- 目标函数或学习目标：
+- 约束、边界条件或数据生成假设：
+- 模型性质与适用边界：
+- 求解原理：
+- 算法输入、输出、关键步骤、可行性处理与停止条件：
+- 关键定量结果：
+- 数值—现象—原因—意义：
+- 验证方式与证据路径：
+- 论文允许表述：
+
+> 根据问题数量复制“问题一”部分；不适用的字段说明替代结构，不机械留空。
+"""
     controls = {
         "创新实验矩阵.csv": write_missing(
             workspace / "求解" / "创新实验矩阵.csv",
@@ -83,13 +112,17 @@ def main() -> int:
             workspace / "求解" / "创新性审查报告.md",
             innovation_report,
         ),
+        "论文论证蓝图.md": write_missing(
+            workspace / "求解" / "论文论证蓝图.md",
+            paper_blueprint,
+        ),
     }
     print(f"Workspace: {workspace}")
     print(f"Template files copied: {copied}; existing files skipped: {skipped}")
     created = [name for name, was_created in controls.items() if was_created]
     preserved = [name for name, was_created in controls.items() if not was_created]
-    print(f"Innovation control files created: {created or 'none'}")
-    print(f"Existing innovation control files preserved: {preserved or 'none'}")
+    print(f"Control files created: {created or 'none'}")
+    print(f"Existing control files preserved: {preserved or 'none'}")
     return 0
 
 
